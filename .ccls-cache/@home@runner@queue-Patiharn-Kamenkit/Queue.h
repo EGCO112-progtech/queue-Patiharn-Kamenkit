@@ -69,3 +69,14 @@ int dequeue_struct(Queue *q){
    return 0;
 }
 
+int dequeue2(Queue *q)
+{
+  NodePtr t=q->headPtr;
+  int value= t->data; 
+  q->headPtr=q->headPtr->nextPtr; 
+     if(!q->headPtr) q->tailPtr=NULL; 
+     q->size--;
+     free(t); 
+     /*Finish dequeue */ 
+     return value;
+}

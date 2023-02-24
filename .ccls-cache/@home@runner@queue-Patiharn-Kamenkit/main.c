@@ -28,10 +28,11 @@ int main(int argc , char **argv) {
             }
  }
   printf("===============================\n");
-  printf("There are %d ppl left in the game",q.size);
+  printf("There are %d ppl left in the game\n",q.size);
 
   printf("Clearing queue\n");
   while(q.size>0)
-      dequeue_struct(&q);
+    dequeue_struct(&q);
   return 0;
-}
+  }
+
